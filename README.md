@@ -26,15 +26,15 @@ This platform is developed using Java and requires JDK 1.8 to run properly. You 
 ## Java IDE ??
 We have had many developers leverage Java IDEs like IntelliJ ans various Eclipse implementations. Most of the resources leveraging this (and the mentors) have been leveraging the Community Edition of IntelliJ. There are also some editors such as Visual Studio Code that have java support which have been leveraged. 
 
+## Kafka 
+In order to see data flowing to kafa there are several tools, we leverage <a href="https://www.kafkatool.com/" target="_blank">Kafka Tools</a>. You can download the tool from this site and follow ANY setup instructions.
+
 ## Directories within Solution
 This solution contains three supporting directories. The intent of these artifacts to enable resources to work locally: 
 
 platform-addons: needed software to run locally. This currently contains amq-streams-1.5 (which is the upstream of Kafka 2.5)
 platform-scripts: support running kafka, creating/listing and deleting topics needed for this solution and also building and packaging the solution as well. All the scripts are named to describe their capabilities 
 platform-testdata: sample transactions to leverage for using the platform.
-
-## Kafka 
-In order to see data flowing to kafa there are several tools, we leverage <a href="https://www.kafkatool.com/" target="_blank">Kafka Tools</a>. You can download the tool from this site and follow ANY setup instructions.
 
 # Scenario: Integration 
 This repository follows a very common general facility based implementation. The implementation
