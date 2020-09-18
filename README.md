@@ -9,7 +9,10 @@ Because of this need in the 1980's a standard was created to help healthcare int
 ## Healthcare Integration Scenario
 Here is a case (Covid) that explains the healthcare experience of a patient and relates it to how HL7 enables systems to work together:<br/>
 A patient comes into the ER complaining of a cough and having a fever for several days. They also state their breathing has become labored over the last few hours. <br/> 
-
+1. Patient walks into ER and get triaged by Nurse. When the curse does this triage an admission (ADT) message is created to take patient information. This assigns him ready to receive care and also enables both the clinical and financial systems. The patient information can be changed or updaated easily and as these changes occur updated transactions and sent and routed to ALL relevant systems near real time. <br/>
+2. Doctor see patient and orders some lab tests and chest x-ray. The doctor's places an Order and an (ORM) message is created specific to this information and send and routed to all clinical and financial systems.<br/>
+3. When the lab or radiology resources completes the Order the systems will generate a Result (ORU) message and it will be updated with various information: the resource that draws the blood, the resource that reads the X-Ray and so forth. As the results come in from the chest X-rays and blood tests the ORU messages are updated with all the relevant information.
+4. The doctor wants to schedule the patient for ANY services, the system will then create a Schedule (SCH) message to ensure the appropriate services are booked.
 
 # Reporting New Issues/Bugs
 Please feel free to use the Issues tab to report any new issues and associate them to the label #bug
