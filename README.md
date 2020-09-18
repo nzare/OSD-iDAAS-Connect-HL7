@@ -7,12 +7,20 @@ Please feel free to use the Issues tab to report any new issues and associate th
 # Setup
 This platform does require Kafka to run. To simplify the process we have built in a scripts directory and all the needed scripts to enable users. We have also included the needed files within this repository, to limit external downloads. The scripts are done from the perspective of the user leveraging a Mac and setting it up within the home directory and able to start everything from it simply. 
 
+## Java
+This platform is developed using Java and requires JDK 1.8 to run properly. You can find setup instructions for your operating system <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html" target="_blank">here</a>. We are not taking a position on OpenJDK or Oracle's JDK as both have been leveraged, we just included the link to Oracle's JDK.
+
+## Java IDE ??
+We have had many developers leverage Java IDEs like IntelliJ ans various Eclipse implementations. Most of the resources leveraging this (and the mentors) have been leveraging the Community Edition of IntelliJ. There are also some editors such as Visual Studio Code that have java support which have been leveraged. 
+
+## Directories within Solution
 This solution contains three supporting directories. The intent of these artifacts to enable resources to work locally: 
 
 platform-addons: needed software to run locally. This currently contains amq-streams-1.5 (which is the upstream of Kafka 2.5)
 platform-scripts: support running kafka, creating/listing and deleting topics needed for this solution and also building and packaging the solution as well. All the scripts are named to describe their capabilities 
 platform-testdata: sample transactions to leverage for using the platform.
 
+## Kafka 
 In order to see data flowing to kafa there are several tools, we leverage <a href="https://www.kafkatool.com/" target="_blank">Kafka Tools</a>. You can download the tool from this site and follow ANY setup instructions.
 
 # Scenario: Integration 
