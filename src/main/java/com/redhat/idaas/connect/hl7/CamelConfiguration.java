@@ -103,6 +103,10 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class).to(getKafkaTopicUri("opsmgmt_platformtransactions"))
     ;
 
+    from("direct:logging")
+            .log(LoggingLevel.INFO, log, "HL7 Message Received: [${body}]")
+    ;
+
     /*
 	 *
 	 * HL7 v2x Server Implementations
@@ -116,7 +120,7 @@ public class CamelConfiguration extends RouteBuilder {
      *
      */
 	  // ADT
-	  from(getHL7Uri(config.getAdtPort()))
+	  from("file:src/data-in/hl7v2/adt?delete=true?noop=true"))
           .routeId("hl7Admissions")
           .convertBodyTo(String.class)
           // set Auditing Properties
